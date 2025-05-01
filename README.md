@@ -167,3 +167,23 @@ Step 4: Configure VLANs on Access Switch 1
       Access1# write memory
 
 
+
+
+Step 5: Configure VLANs on Access Switch 2
+1. Click on Switch-0, go to the CLI tab.
+2. Configure the hostname for the core switch
+Switch-1> enable
+Switch-1# configure terminal
+Switch-1(config)# hostname Access2
+3. Create VLANs for the following: 30 - IT
+Access2(config)# vlan 30
+Access2(config-vlan)# name IT
+Access2(config-vlan)# exit
+4. Configure the uplink to the core switch as a trunk:
+Access2(config)# int gi0/2
+Access2(config-if)#switchport mode trunk
+Access2(config-if)#switchport trunk allowed vlan 30
+5. Assign access and voice ports to VLAN 30 for IT computers:
+Access2(config)# int range fa0/1-5
+Access2(config-if)#switchport mode access
+Access2(config-if)#switchport access vlan 30
