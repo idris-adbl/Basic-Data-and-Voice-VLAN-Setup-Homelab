@@ -1,7 +1,13 @@
-
-
-
 # Basic-Data-and-Voice-VLAN-Setup-Homelab
+
+
+
+
+
+![Basic vlan setup](https://github.com/user-attachments/assets/400a7f72-88d4-4e61-8564-f518303462db)
+
+
+
   **Objective**
   
 To set up an office network with four VLANs: one for regular office staff, one for HR,
